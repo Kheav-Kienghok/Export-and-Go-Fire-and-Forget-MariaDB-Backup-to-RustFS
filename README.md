@@ -32,15 +32,15 @@ Check the result any time with `tail -f export-and-send.log`.
 
 ## Setup
 
-    unzip export-and-send-to-rustfs.zip -d ~ && cd ~/export-and-send-to-rustfs
+    git clone https://github.com/Kheav-Kienghok/Export-and-Go-Fire-and-Forget-MariaDB-Backup-to-RustFS.git && cd Export-and-Go-Fire-and-Forget-MariaDB-Backup-to-RustFS
+    cp .env.example .env
     vi .env
-    chmod 600 .env && chmod 700 export-and-send.sh
 
 Set `RUSTFS_ACCESS_KEY` and `RUSTFS_SECRET_KEY`. `AGE_RECIPIENT` is the age public key.
 
 ## Run
 
-    ./export-and-send.sh wordpress_staging
+    sudo ./export-and-send.sh wordpress_staging
 
 It returns immediately and keeps running in the background.
 
